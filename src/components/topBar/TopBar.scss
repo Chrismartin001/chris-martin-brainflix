@@ -1,0 +1,14 @@
+.topbar {
+  display: flex;
+  flex-direction: column;
+
+  &__logo {
+      width: ;
+  }
+
+  &__avatar {
+    border-radius: 50%;
+    width: 1.2rem;
+    height: 1.2rem;
+  }
+}
