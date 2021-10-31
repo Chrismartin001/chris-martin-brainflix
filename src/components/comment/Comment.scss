@@ -1,0 +1,104 @@
+.comment {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+  flex-wrap: wrap;
+
+  //   @include tablet {
+  //     margin: 1rem 8rem;
+  //   }
+
+  //   @include desktop {
+  //     align-items: left;
+  //     margin-left: 22.5rem;
+  //   }
+
+  &__header {
+    font-size: 1rem;
+    color: #afafaf;
+    padding-right: 1.6rem;
+    padding-bottom: 0.5rem;
+    // @include desktop {
+    //   padding-right: 20rem;
+    //   margin-bottom: 2rem;
+    // }
+  }
+
+  &__overlay {
+    display: flex;
+  }
+
+  &__title {
+    padding: 1rem 0rem 0.5rem 4rem;
+
+    // @include tablet {
+    //   font-size: 1.2rem;
+    //   margin-left: 1rem;
+    // }
+
+    // @include desktop {
+    // }
+
+    &--box {
+      height: 6rem;
+      width: 75vw;
+      border-radius: 0.25rem;
+      margin-left: auto;
+      padding-left: 1rem;
+
+      //   @include tablet {
+      //     width: 64.75vw;
+      //     margin-left: 5rem;
+      //   }
+      //   @include desktop {
+      //     margin-left: 3rem;
+      //     width: 45.5vw;
+      //   }
+    }
+  }
+
+  &__avatar {
+    background-image: url(../../assets/images/Mohan-muruge.jpg);
+    background-position: 17%;
+    border-radius: 50%;
+    height: 2.5rem;
+    width: 2.5rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    // @include tablet {
+    //   width: 3.5rem;
+    //   height: 3.5rem;
+    // }
+
+    // @include desktop {
+    //   margin-left: -1rem;
+    // }
+  }
+
+  &__button {
+    background-color: #0095ff;
+    color: white;
+    width: 75vw;
+    height: 3rem;
+    border-radius: 0.25rem;
+    margin-top: 1rem;
+    margin-left: auto;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+
+    &--img {
+    }
+
+    // @include tablet {
+    //   width: 25vw;
+    //   margin-left: auto;
+    //   margin-right: 1rem;
+    //   margin-bottom: 1rem;
+    // }
+
+    // @include desktop {
+    //   margin-left: 25vw;
+    // }
+  }
+}

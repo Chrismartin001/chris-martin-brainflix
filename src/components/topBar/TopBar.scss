@@ -1,14 +1,51 @@
 .topbar {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  margin: 1rem;
 
   &__logo {
-      width: ;
+    width: 10rem;
+    margin-bottom: 1rem;
+  }
+
+  &__overlay {
+    display: flex;
+  }
+
+  &__search {
+    margin-right: auto;
+    width: 72.5vw;
+    margin-bottom: 1rem;
+    height: 3rem;
+    border-radius: 0.25rem;
+    background-image: url(../../assets/icons/search.svg);
+    background-position: 5%;
+    background-repeat: no-repeat;
+    padding-left: 3rem;
   }
 
   &__avatar {
+    background-image: url(../../assets/images/Mohan-muruge.jpg);
     border-radius: 50%;
-    width: 1.2rem;
-    height: 1.2rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    background-position: 17%;
+    border-radius: 50%;
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-left: 1rem;
+  }
+
+  &__button {
+    background-image: url(../../assets/icons/upload.svg);
+    background-position: 3%;
+    background-repeat: no-repeat;
+    background-color: #0095ff;
+    width: 90vw;
+    border-radius: 0.25rem;
+    height: 3rem;
+    color: white;
   }
 }

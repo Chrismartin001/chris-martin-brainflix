@@ -1,0 +1,40 @@
+.next-video {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+}
+
+.title {
+  color: #afafaf;
+  font-size: 1rem;
+  margin: 1rem;
+}
+
+.video {
+  display: flex;
+  margin: 0;
+
+  &__img {
+    display: flex;
+    width: 7rem;
+    height: 4rem;
+    border-radius: 0.25rem;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  &__box {
+    margin-left: 1rem;
+    &--text {
+      white-space: wrap;
+      max-width: 150px;
+      max-lines: 2;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    &--channel {
+      padding-right: 4rem;
+      padding-top: 0.2rem;
+    }
+  }
+}
