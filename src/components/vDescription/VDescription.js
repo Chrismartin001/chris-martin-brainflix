@@ -7,7 +7,7 @@ export default function VDescription(props) {
   return (
     <main className="container">
       <h1>{props.heroVid.title}</h1>
-      <hr />
+      <hr className="hidden" />
       <div className="container__info">
         <div className="container__info--left">
           <h4>By {props.heroVid.channel}</h4>

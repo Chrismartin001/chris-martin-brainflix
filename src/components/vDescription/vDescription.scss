@@ -2,6 +2,10 @@
   font-family: avenir;
   margin: 1rem;
 
+  @media (min-width: 768px) {
+    margin: 2rem;
+  }
+
   &__info {
     display: flex;
     margin: 1rem 0;
@@ -10,12 +14,20 @@
       display: flex;
       flex-direction: column;
       align-items: flex-start;
+
+      @media (min-width: 768px) {
+        flex-direction: row;
+      }
     }
 
     &--right {
       display: flex;
       flex-direction: column;
       margin-left: auto;
+
+      @media (min-width: 768px) {
+        flex-direction: row;
+      }
     }
 
     &--icons {
@@ -35,15 +47,31 @@ h1 {
   font-size: 1.5rem;
   font-family: avenir-bold;
   margin-bottom: 1rem;
+
+  @media (min-width: 768px) {
+    font-size: 2.0625rem;
+    max-width: 50rem;
+    text-align: left;
+  }
 }
 
 h4 {
   padding-bottom: 0.75rem;
   font-family: avenir;
+
+  @media (min-width: 768px) {
+    margin-right: 2rem;
+  }
 }
 
 p {
   font-family: avenir;
   margin-top: 1rem;
   text-align: left;
+}
+
+.hidden {
+  @media (min-width: 768px) {
+    display: none;
+  }
 }

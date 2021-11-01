@@ -6,11 +6,16 @@
 
   @media (min-width: 768px) {
     flex-direction: row;
+    margin: 1rem 2rem;
   }
 
   &__logo {
     width: 10rem;
     margin-bottom: 1rem;
+
+    @media (min-width: 768px) {
+      margin-left: 10rem;
+    }
   }
 
   &__overlay {
@@ -31,6 +36,7 @@
 
     @media (min-width: 768px) {
       width: 30vw;
+      margin-left: 1rem;
     }
   }
 
@@ -45,6 +51,15 @@
     background-repeat: no-repeat;
     background-size: cover;
     margin-left: 1rem;
+
+    @media (min-width: 768px) {
+      margin-right: 2rem;
+    }
+
+    @media (min-width: 1280px) {
+      width: 3.5rem;
+      height: 3.5rem;
+    }
   }
 
   &__button {
@@ -60,6 +75,7 @@
 
     @media (min-width: 768px) {
       width: 25vw;
+      margin-bottom: 1rem;
     }
   }
 }

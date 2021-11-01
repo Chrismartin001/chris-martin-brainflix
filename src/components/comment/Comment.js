@@ -4,8 +4,8 @@ import "./Comment.scss";
 export default function Comment(props) {
   return (
     <article>
+      <h2 className="comment__header">Join the Conversation</h2>
       <form className="comment">
-        <h2 className="comment__header">Join the Conversation</h2>
         <div className="comment__overlay">
           <figure className="comment__avatar"></figure>
           <input type="text" name="content" className="comment__title--box" required placeholder="Add a new comment" />{" "}
@@ -29,9 +29,8 @@ export default function Comment(props) {
                   day: "2-digit",
                 }).format(comment.timestamp)}
               </p>
-
-              <p className="comment-card__text">{comment.comment}</p>
             </div>
+            <p className="comment-card__text">{comment.comment}</p>
 
             <hr />
           </section>

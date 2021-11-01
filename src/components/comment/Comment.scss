@@ -4,24 +4,23 @@
   margin: 1rem;
   flex-wrap: wrap;
 
-  //   @include tablet {
-  //     margin: 1rem 8rem;
-  //   }
+  @media (min-width: 768px) {
+    flex-direction: row;
+    margin: 2rem;
+  }
 
-  //   @include desktop {
-  //     align-items: left;
-  //     margin-left: 22.5rem;
-  //   }
+  @media (min-width: 1280px) {
+    margin: 0 5rem;
+  }
 
   &__header {
     font-size: 1rem;
     color: #afafaf;
     padding-right: 1.6rem;
-    padding-bottom: 0.5rem;
-    // @include desktop {
-    //   padding-right: 20rem;
-    //   margin-bottom: 2rem;
-    // }
+
+    @media (min-width: 1280px) {
+      margin-right: 60rem;
+    }
   }
 
   &__overlay {
@@ -31,14 +30,6 @@
   &__title {
     padding: 1rem 0rem 0.5rem 4rem;
 
-    // @include tablet {
-    //   font-size: 1.2rem;
-    //   margin-left: 1rem;
-    // }
-
-    // @include desktop {
-    // }
-
     &--box {
       height: 6rem;
       width: 75vw;
@@ -46,14 +37,11 @@
       margin-left: auto;
       padding-left: 1rem;
 
-      //   @include tablet {
-      //     width: 64.75vw;
-      //     margin-left: 5rem;
-      //   }
-      //   @include desktop {
-      //     margin-left: 3rem;
-      //     width: 45.5vw;
-      //   }
+      @media (min-width: 768px) {
+        width: 50vw;
+        height: 3rem;
+        margin-right: 4rem;
+      }
     }
   }
 
@@ -66,17 +54,20 @@
     background-repeat: no-repeat;
     background-size: cover;
 
-    // @include tablet {
-    //   width: 3.5rem;
-    //   height: 3.5rem;
-    // }
+    @media (min-width: 768px) {
+      margin-right: 2rem;
+    }
 
-    // @include desktop {
-    //   margin-left: -1rem;
-    // }
+    @media (min-width: 1280px) {
+      width: 3.5rem;
+      height: 3.5rem;
+    }
   }
 
   &__button {
+    background-image: url(../../assets/icons/add_comment.svg);
+    background-position: 3%;
+    background-repeat: no-repeat;
     background-color: #0095ff;
     color: white;
     width: 75vw;
@@ -87,34 +78,43 @@
     font-size: 1.2rem;
     margin-bottom: 1rem;
 
-    &--img {
+    @media (min-width: 768px) {
+      width: 20vw;
+      margin-top: 0;
+      margin-left: 0;
     }
+  }
+}
 
-    // @include tablet {
-    //   width: 25vw;
-    //   margin-left: auto;
-    //   margin-right: 1rem;
-    //   margin-bottom: 1rem;
-    // }
+.divider {
+  @media (min-width: 768px) {
+    width: 100vw;
+  }
 
-    // @include desktop {
-    //   margin-left: 25vw;
-    // }
+  @media (min-width: 1280px) {
+    margin-top: 1rem;
   }
 }
 
 .comment-Container {
   margin: 1rem;
+
+  @media (min-width: 768px) {
+    margin: 2rem;
+  }
+
+  @media (min-width: 1280px) {
+    margin: 2rem 5rem;
+  }
 }
 
 .comment-card {
   display: flex;
   flex-wrap: wrap;
 
-  // @include desktop {
-  //   align-items: center;
-  //   margin-left: 13.5rem;
-  // }
+  @media (min-width: 1280px) {
+    margin: 0 3rem;
+  }
 
   &__avatar {
     border-radius: 50%;
@@ -123,10 +123,13 @@
     background-color: #afafaf;
     margin-right: auto;
 
-    // @include tablet {
-    //   width: 3.5rem;
-    //   height: 3.5rem;
-    // }
+    @media (min-width: 1280px) {
+      width: 3.5rem;
+      height: 3.5rem;
+      margin-bottom: 2rem;
+      margin-left: -3rem;
+      margin-right: 0;
+    }
   }
 
   &__name {
@@ -134,6 +137,10 @@
     font-size: 1rem;
     margin-right: auto;
     margin-top: 1rem;
+
+    @media (min-width: 1280px) {
+      margin-left: 2rem;
+    }
   }
 
   &__date {
@@ -144,5 +151,9 @@
   &__text {
     font-family: avenir;
     margin-bottom: 1rem;
+
+    @media (min-width: 1280px) {
+      margin-left: 5.5rem;
+    }
   }
 }
