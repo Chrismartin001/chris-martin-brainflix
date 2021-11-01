@@ -4,6 +4,10 @@
   align-items: center;
   margin: 1rem;
 
+  @media (min-width: 768px) {
+    flex-direction: row;
+  }
+
   &__logo {
     width: 10rem;
     margin-bottom: 1rem;
@@ -23,6 +27,11 @@
     background-position: 5%;
     background-repeat: no-repeat;
     padding-left: 3rem;
+    font-family: "avenir";
+
+    @media (min-width: 768px) {
+      width: 30vw;
+    }
   }
 
   &__avatar {
@@ -39,6 +48,7 @@
   }
 
   &__button {
+    font-family: "avenir";
     background-image: url(../../assets/icons/upload.svg);
     background-position: 3%;
     background-repeat: no-repeat;
@@ -47,5 +57,9 @@
     border-radius: 0.25rem;
     height: 3rem;
     color: white;
+
+    @media (min-width: 768px) {
+      width: 25vw;
+    }
   }
 }

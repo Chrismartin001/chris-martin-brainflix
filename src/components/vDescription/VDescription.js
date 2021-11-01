@@ -1,30 +1,39 @@
 import react from "react";
 import views from "../../assets/icons/views.svg";
 import likes from "../../assets/icons/likes.svg";
-// import "./vDesription.scss";
+import "./vDescription.scss";
 
 export default function VDescription(props) {
   return (
-    <main>
+    <main className="container">
       <h1>{props.heroVid.title}</h1>
       <hr />
-      <div>
-        <div>
-          <p>By {props.heroVid.channel}</p>
-          <h3>{props.heroVid.timestamp}</h3>
-        </div>
-        <div>
+      <div className="container__info">
+        <div className="container__info--left">
+          <h4>By {props.heroVid.channel}</h4>
           <h3>
-            <img src={views} />
-            {props.heroVid.views}
+            {" "}
+            {new Intl.DateTimeFormat("en-US", {
+              year: "numeric",
+              month: "numeric",
+              day: "2-digit",
+            }).format(props.heroVid.timestamp)}
           </h3>
+        </div>
+        <div className="container__info--right">
+          <h4>
+            <img className="container__info--icons" src={views} />
+            {props.heroVid.views}
+          </h4>
           <h3>
-            <img src={likes} />
+            <img className="container__info--icons" src={likes} />
             {props.heroVid.likes}
           </h3>
         </div>
-        <p>{props.heroVid.description}</p>
       </div>
+      <hr />
+      <p>{props.heroVid.description}</p>
+      <p className="container__footer">3 comments</p>
     </main>
   );
 }

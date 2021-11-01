@@ -1,0 +1,49 @@
+.container {
+  font-family: avenir;
+  margin: 1rem;
+
+  &__info {
+    display: flex;
+    margin: 1rem 0;
+
+    &--left {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    &--right {
+      display: flex;
+      flex-direction: column;
+      margin-left: auto;
+    }
+
+    &--icons {
+      padding-right: 0.75rem;
+    }
+  }
+
+  &__footer {
+    font-family: avenir-bold;
+    text-align: left;
+  }
+}
+
+h1 {
+  max-width: 15.5625rem;
+  max-lines: 2;
+  font-size: 1.5rem;
+  font-family: avenir-bold;
+  margin-bottom: 1rem;
+}
+
+h4 {
+  padding-bottom: 0.75rem;
+  font-family: avenir;
+}
+
+p {
+  font-family: avenir;
+  margin-top: 1rem;
+  text-align: left;
+}

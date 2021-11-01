@@ -16,18 +16,29 @@ export default function Comment(props) {
 
       {props.heroVid.comments.map((comment) => {
         return (
-          <section>
-            <img></img>
-            <div>
-              <div>
-                <h2>{comment.name}</h2>
-                <p>{comment.timestamp}</p>
-              </div>
-              <p>{comment.comment}</p>
+          <section className="comment-Container">
+            <div className="comment-card">
+              <img className="comment-card__avatar" />
+
+              <h2 className="comment-card__name">{comment.name}</h2>
+              <p className="comment-card__date">
+                {" "}
+                {new Intl.DateTimeFormat("en-US", {
+                  year: "numeric",
+                  month: "numeric",
+                  day: "2-digit",
+                }).format(comment.timestamp)}
+              </p>
+
+              <p className="comment-card__text">{comment.comment}</p>
             </div>
+
+            <hr />
           </section>
         );
       })}
     </article>
   );
 }
+
+// {comment.timestamp}

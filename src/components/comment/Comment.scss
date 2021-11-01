@@ -102,3 +102,47 @@
     // }
   }
 }
+
+.comment-Container {
+  margin: 1rem;
+}
+
+.comment-card {
+  display: flex;
+  flex-wrap: wrap;
+
+  // @include desktop {
+  //   align-items: center;
+  //   margin-left: 13.5rem;
+  // }
+
+  &__avatar {
+    border-radius: 50%;
+    height: 2.5rem;
+    width: 2.5rem;
+    background-color: #afafaf;
+    margin-right: auto;
+
+    // @include tablet {
+    //   width: 3.5rem;
+    //   height: 3.5rem;
+    // }
+  }
+
+  &__name {
+    font-family: avenir-bold;
+    font-size: 1rem;
+    margin-right: auto;
+    margin-top: 1rem;
+  }
+
+  &__date {
+    font-family: avenir;
+    color: #afafaf;
+  }
+
+  &__text {
+    font-family: avenir;
+    margin-bottom: 1rem;
+  }
+}
