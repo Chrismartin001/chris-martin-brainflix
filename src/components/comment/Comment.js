@@ -11,12 +11,12 @@ export default function Comment(props) {
           <input type="text" name="content" className="comment__title--box" required placeholder="Add a new comment" />{" "}
         </div>
         <button className="comment__button">Comment</button>
-        <hr className="divider" />
       </form>
 
       {props.heroVid.comments.map((comment) => {
         return (
           <section className="comment-Container">
+            <hr className="dividers" />
             <div className="comment-card">
               <img className="comment-card__avatar" />
 
@@ -31,11 +31,10 @@ export default function Comment(props) {
               </p>
             </div>
             <p className="comment-card__text">{comment.comment}</p>
-
-            <hr />
           </section>
         );
       })}
+      <hr className="divider" />
     </article>
   );
 }

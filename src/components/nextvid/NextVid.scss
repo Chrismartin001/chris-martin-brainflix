@@ -1,3 +1,7 @@
+@use "../../styles/partials/mixins";
+@use "../../styles/partials/typography";
+@use "../../styles/partials/variables";
+
 .next-video {
   display: flex;
   flex-direction: column;

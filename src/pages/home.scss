@@ -1,0 +1,12 @@
+@use "../styles/partials/mixins" as *;
+
+.home {
+  @include desktop {
+    display: flex;
+    margin: 2rem 6rem;
+  }
+
+  &__column {
+    flex-direction: column;
+  }
+}

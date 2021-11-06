@@ -1,9 +1,21 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/typography";
+@use "../../styles/partials/variables";
+
+.hidden-line {
+  display: none;
+}
+
 .container {
   font-family: avenir;
   margin: 1rem;
 
   @media (min-width: 768px) {
     margin: 2rem;
+  }
+
+  @include desktop {
+    max-width: 60vw;
   }
 
   &__info {
