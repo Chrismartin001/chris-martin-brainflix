@@ -1,7 +1,4 @@
-// import React from "react";
-
 import React, { Component } from "react";
-
 import data from "../data/video-details.json";
 import NextVid from "../components/nextvid/NextVid";
 import Comment from "../components/comment/Comment";
@@ -10,7 +7,8 @@ import VDescription from "../components/vDescription/VDescription";
 import "./home.scss";
 import axios from "axios";
 
-// const API_URL_COMMENTS
+const apiKey = "?api_key=deda3838-4e85-4bc0-9f18-19c63f0ff960";
+const apiUrl = `https://project-2-api.herokuapp.com${apiKey}`;
 
 export default class Home extends Component {
   state = {
@@ -19,19 +17,19 @@ export default class Home extends Component {
   };
 
   // componentDidMount() {
-  //   axios.get(API_URL_COMMENT_LIST).then((res) => {
-  //     console.log(res.data.results);
-  //     this.setState({comments: res.data.results[0]}, () => {
+  //   axios.get(apiUrl).then((res) => {
+  //     console.log(res.data);
+  //     this.setState({recommVids: res.data.results[0]}, () => {
   //       const filteredArray = res.data.filter((commentCall) => {
-  //         return commentCall.id !== this.state.comments.id;
+  //         return commentCall.id !== this.state.recommVids.id;
   //       });
   //       this.setState({coms: filteredArray});
   //     })
-  //   }).catch(err);
+  //   });
+  //   .catch(err);
   // }
 
   handleClick = (event, id) => {
-    console.log("handleClick");
     const currentVid = this.state.recommVids.find((video) => video.id === id);
 
     this.setState({
@@ -40,7 +38,6 @@ export default class Home extends Component {
     });
   };
   render() {
-    console.log(this.state);
     return (
       <article>
         <DisplayVid heroVid={this.state.heroVid} />

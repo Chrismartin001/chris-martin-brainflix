@@ -18,7 +18,7 @@ export default function Comment(props) {
           <section className="comment-Container">
             <hr className="dividers" />
             <div className="comment-card">
-              <img className="comment-card__avatar" />
+              <figure className="comment-card__avatar" />
 
               <h2 className="comment-card__name">{comment.name}</h2>
               <p className="comment-card__date">
@@ -38,5 +38,3 @@ export default function Comment(props) {
     </article>
   );
 }
-
-// {comment.timestamp}

@@ -1,4 +1,3 @@
-import react from "react";
 import views from "../../assets/icons/views.svg";
 import likes from "../../assets/icons/likes.svg";
 import "./vDescription.scss";
@@ -22,11 +21,11 @@ export default function VDescription(props) {
         </div>
         <div className="container__info--right">
           <h4>
-            <img className="container__info--icons" src={views} />
+            <img className="container__info--icons" alt="An open eye icon" src={views} />
             {props.heroVid.views}
           </h4>
           <h3>
-            <img className="container__info--icons" src={likes} />
+            <img className="container__info--icons" alt="a heart resprenting the likes" src={likes} />
             {props.heroVid.likes}
           </h3>
         </div>

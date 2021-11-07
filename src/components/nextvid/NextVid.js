@@ -9,7 +9,7 @@ export default function NextVid(props) {
       <div className="next-video">
         <h2 className="title">Next Vidoes</h2>
         {props.recommVids
-          .filter((vid) => vid.id != props.heroVid.id)
+          .filter((vid) => vid.id !== props.heroVid.id)
           .map((vid) => {
             return (
               <div
