@@ -1,6 +1,6 @@
 @use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/typography";
-@use "../../styles/partials/variables";
+@use "../../styles/partials/variables" as *;
 
 .comment {
   display: flex;
@@ -29,7 +29,7 @@
     }
   }
 
-  &__overlay {
+  &__overlay2 {
     display: flex;
   }
 
@@ -79,7 +79,7 @@
     background-image: url(../../assets/icons/add_comment.svg);
     background-position: 3%;
     background-repeat: no-repeat;
-    background-color: #0095ff;
+    background-color: $BrainFlix-blue;
     color: white;
     width: 75vw;
     height: 3rem;

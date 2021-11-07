@@ -1,29 +1,37 @@
-@use "../../styles/partials/mixins";
+@use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/typography";
-@use "../../styles/partials/variables";
+@use "../../styles/partials/variables" as *;
 
 .topbar {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 1rem;
+  margin: 1rem 3rem;
 
-  @media (min-width: 768px) {
+  @include tablet {
     flex-direction: row;
-    margin: 1rem 2rem;
   }
 
   &__logo {
-    width: 10rem;
+    width: 8rem;
     margin-bottom: 1rem;
 
-    @media (min-width: 768px) {
-      margin-left: 10rem;
+    @include tablet {
+      margin-top: 1rem;
+    }
+
+    @include desktop {
+      margin-right: auto;
     }
   }
 
   &__overlay {
     display: flex;
+    flex-wrap: wrap;
+
+    @include desktop {
+      margin-left: auto;
+    }
   }
 
   &__search {
@@ -38,9 +46,14 @@
     padding-left: 3rem;
     font-family: "avenir";
 
-    @media (min-width: 768px) {
+    @include tablet {
       width: 30vw;
-      margin-left: 1rem;
+      margin-left: 4rem;
+      margin-bottom: 0;
+    }
+
+    @include desktop {
+      width: 25vw;
     }
   }
 
@@ -51,18 +64,18 @@
     height: 2.5rem;
     background-position: 17%;
     border-radius: 50%;
-
     background-repeat: no-repeat;
     background-size: cover;
     margin-left: 1rem;
 
-    @media (min-width: 768px) {
+    @include tablet {
       margin-right: 2rem;
+      order: 2;
     }
 
-    @media (min-width: 1280px) {
-      width: 3.5rem;
-      height: 3.5rem;
+    @include desktop {
+      width: 3rem;
+      height: 3rem;
     }
   }
 
@@ -77,9 +90,14 @@
     height: 3rem;
     color: white;
 
-    @media (min-width: 768px) {
+    @include tablet {
       width: 25vw;
-      margin-bottom: 1rem;
+      margin-left: 2rem;
+      order: 1;
+    }
+
+    @include desktop {
+      width: 15vw;
     }
   }
 }

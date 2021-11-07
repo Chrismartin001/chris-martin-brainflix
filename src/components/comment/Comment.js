@@ -6,7 +6,7 @@ export default function Comment(props) {
     <article>
       <h2 className="comment__header">Join the Conversation</h2>
       <form className="comment">
-        <div className="comment__overlay">
+        <div className="comment__overlay2">
           <figure className="comment__avatar"></figure>
           <input type="text" name="content" className="comment__title--box" required placeholder="Add a new comment" />{" "}
         </div>

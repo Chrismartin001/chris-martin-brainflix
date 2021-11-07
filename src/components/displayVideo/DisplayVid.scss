@@ -1,11 +1,11 @@
-@use "../../styles/partials/mixins";
+@use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/typography";
 @use "../../styles/partials/variables";
 
 video {
   width: 100vw;
 
-  @media (min-width: 768px) {
+  @include tablet {
     background-color: black;
     padding: 0 3rem;
   }
