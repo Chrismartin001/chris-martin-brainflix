@@ -25,7 +25,8 @@
     padding-right: 1.6rem;
 
     @include desktop {
-      margin-right: 40rem;
+      text-align: left;
+      margin-left: 5rem;
     }
   }
 
@@ -50,7 +51,7 @@
       }
 
       @include desktop {
-        width: 30vw;
+        width: 25vw;
         margin-right: 2rem;
       }
     }

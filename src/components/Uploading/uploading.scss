@@ -48,6 +48,10 @@
     @include tablet {
       width: 50vw;
     }
+
+    @include desktop {
+      height: 14rem;
+    }
   }
 
   &__hidden {
@@ -56,6 +60,9 @@
     @include tablet {
       display: flex;
       margin: 1rem 0;
+    }
+
+    @include desktop {
     }
   }
 }
@@ -98,8 +105,9 @@
     }
 
     @include desktop {
-      width: 35vw;
+      width: 45vw;
       margin-right: 2rem;
+      margin-bottom: 1rem;
     }
   }
 
@@ -114,7 +122,7 @@
     }
 
     @include desktop {
-      width: 35vw;
+      width: 45vw;
       margin-right: 2rem;
     }
   }
@@ -152,7 +160,6 @@
 
     @include desktop {
       width: 14vw;
-      margin-left: auto;
     }
   }
 
@@ -165,4 +172,8 @@
       order: 1;
     }
   }
+}
+
+.container1 {
+  display: flex;
 }

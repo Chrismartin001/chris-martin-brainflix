@@ -22,6 +22,7 @@
 
     @include desktop {
       margin-right: auto;
+      margin-left: 2rem;
     }
   }
 
@@ -48,7 +49,7 @@
 
     @include tablet {
       width: 30vw;
-      margin-left: 4rem;
+      margin-left: 2rem;
       margin-bottom: 0;
     }
 
@@ -92,7 +93,8 @@
 
     @include tablet {
       width: 25vw;
-      margin-left: 2rem;
+      margin-left: 1rem;
+
       order: 1;
     }
 
