@@ -2,7 +2,6 @@ import React from "react";
 import Bike from "../../assets/images/Upload-video-preview.jpg";
 import "./uploading.scss";
 
-
 export default function Uploading() {
   return (
     <article className="upload">

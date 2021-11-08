@@ -10,18 +10,11 @@ export default function NextVid(props) {
         <h2 className="title">Next Vidoes</h2>
         {props.recommVids
           .filter((vid) => vid.id !== props.heroVid.id)
-          .map((vid) => {
+          .map((vid, i) => {
             return (
-              <div
-                onClick={(event) => {
-                  props.handleClick(event, vid.id);
-                }}
-                className="video"
-              >
-                {" "}
+              <div key={i} className="video">
                 <Link to={`/vidoes/${vid.id}`}>
                   <img src={vid.image} alt={vid.title} className="video__img" />
-                  <p onClick={(event) => props.handleClick(event, vid.id)}></p>
                 </Link>
                 <div className="video__box">
                   <p className="video__box--text">{vid.title}</p>

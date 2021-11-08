@@ -13,9 +13,9 @@ export default function Comment(props) {
         <button className="comment__button">Comment</button>
       </form>
 
-      {props.heroVid.comments.map((comment) => {
+      {props.heroVid.comments.map((comment, i) => {
         return (
-          <section className="comment-Container">
+          <section key={i} className="comment-Container">
             <hr className="dividers" />
             <div className="comment-card">
               <figure className="comment-card__avatar" />
