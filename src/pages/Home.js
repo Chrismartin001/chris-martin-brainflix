@@ -43,15 +43,6 @@ export default class Home extends Component {
     }
   }
 
-  // handleClick = (event, id) => {
-  //   const currentVid = this.state.recommVids.find((video) => video.id === id);
-
-  //   this.setState({
-  //     heroVid: currentVid,
-  //     recommVids: null.filter((video) => currentVid.id !== video.id),
-  //   });
-  // };
-
   render() {
     if (this.state.heroVid === null) {
       return <p>Loading...</p>;
