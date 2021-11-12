@@ -1,7 +1,3 @@
-Had trouble with the Partials not connecting properly so I did it manually will adress OS.
-
-
-
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
