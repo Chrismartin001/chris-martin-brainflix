@@ -6,8 +6,7 @@ import VDescription from "../components/vDescription/VDescription";
 import "./home.scss";
 import axios from "axios";
 
-const apiKey = "?api_key=deda3838-4e85-4bc0-9f18-19c63f0ff960";
-const apiUrl = `https://project-2-api.herokuapp.com`;
+const apiUrl = "http://localhost:8080";
 
 export default class Home extends Component {
   state = {
@@ -17,10 +16,10 @@ export default class Home extends Component {
 
   componentDidMount() {
     axios
-      .get(`${apiUrl}/videos${apiKey}`)
+      .get(`${apiUrl}/videos`)
       .then((res) => {
         this.setState({ recommVids: res.data });
-        return axios.get(`https://project-2-api.herokuapp.com/videos/${res.data[0].id}?api_key=c587c3cb-f196-4e06-8603-5cb8858f17d3`);
+        return axios.get(`${apiUrl}/videos/${res.data[0].id}`);
       })
       .then((res) => {
         this.setState({ heroVid: res.data });
@@ -33,7 +32,7 @@ export default class Home extends Component {
   componentDidUpdate(prevProps, prefState) {
     if (prevProps.match.params.id !== this.props.match.id) {
       axios
-        .get(`${apiUrl}/videos/${this.props.match.params.id}${apiKey}`)
+        .get(`${apiUrl}/videos/${this.props.match.params.id}`)
         .then((res) => {
           this.setState({ heroVid: res.data });
         })
