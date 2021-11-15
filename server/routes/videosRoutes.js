@@ -1,8 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const fs = require("fs");
-const uniqid = require("uniqid");
-const path = require("path");
+const uuid = require("uuid");
 
 let videoList = [];
 
@@ -16,26 +15,29 @@ const grabVideos = () => {
 };
 grabVideos();
 
+router.get("/", (req, res) => {
+  res.json(videoList);
+});
+
 router.get("/:id", (req, res) => {
-  const strippedData = videoList.map((video) => {
+  const strippedData = videoList.find((video) => {
     return video.id === req.params.id;
   });
-  if (strippedData) {
-    res.json(strippedData);
-  } else {
-    res.send("Video not found.");
+  if (!strippedData) {
+    res.status(404).send("Video not found");
   }
+  res.json(strippedData);
 });
 
 router.post("/", (req, res) => {
   let videos = videoData;
   const { title, description, image } = req.body;
   if (!(title && description && image)) {
-    res.status(400).send("Please provide title and description.");
+    res.status(500).send("Please provide title and description.");
   }
 
   const newVideo = {
-    id: uuidv4(),
+    id: uuid.v4(),
     title,
     channel: randomName,
     image: "http",
@@ -48,13 +50,14 @@ router.post("/", (req, res) => {
     comments: [],
   };
 
-  video.push(newVideo);
+  videos.push(newVideo);
 
-  fs.writeFile("data/videos");
-  if (err) {
-    res.status(500).send(err);
-  }
-  res.status(201).json(newVideo);
+  fs.writeFile("./data/videos.json", JSON.stringify(strippedData), (err) => {
+    if (err) {
+      res.status(500).send("Upload was unsuccessful!");
+    }
+    res.json(strippedData);
+  });
 });
 
-module.exports = express.Router();
+module.exports = router;

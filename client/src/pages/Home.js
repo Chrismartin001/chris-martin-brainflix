@@ -22,7 +22,7 @@ export default class Home extends Component {
         return axios.get(`${apiUrl}/videos/${res.data[0].id}`);
       })
       .then((res) => {
-        this.setState({ heroVid: res.data });
+        this.setState({ heroVid: res.data, isLoading: false });
       })
       .catch((err) => {
         console.log(err);
@@ -59,7 +59,7 @@ export default class Home extends Component {
             </div>
 
             <NextVid heroVid={this.state.heroVid} recommVids={this.state.recommVids} />
-          </section>{" "}
+          </section>
         </article>
       )
     );

@@ -1,8 +1,24 @@
 import React from "react";
 import Bike from "../../assets/images/Upload-video-preview.jpg";
 import "./uploading.scss";
+import axios from "axios";
+
+const apiURL = "http://localhost:8080";
 
 export default function Uploading() {
+  const uploadVideo = (event) => {
+    event.preventDefault();
+    let newVideo = {
+      title: event.target.title.value,
+      image: Bike,
+      description: event.target.description,
+    };
+    axios.post(`${apiURL}/videos`, newVideo).then((res) => {
+      console.log(res);
+    });
+    alert("Video uploaded");
+  };
+
   return (
     <article className="upload">
       <hr className="upload__divider" />
@@ -20,7 +36,9 @@ export default function Uploading() {
 
           <hr className="upload__hidden" />
           <div className="comment1__overlay">
-            <button className="comment1__button">Publish</button>
+            <button onClick={uploadVideo} className="comment1__button">
+              Publish
+            </button>
             <h2 className="comment1__cancel">CANCEL</h2>
           </div>
         </section>
