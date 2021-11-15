@@ -1,4 +1,4 @@
-@use "../../styles/partials/mixins";
+@use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/typography";
 @use "../../styles/partials/variables";
 
@@ -7,11 +7,11 @@
   flex-direction: column;
   align-items: baseline;
 
-  @media (min-width: 768px) {
+  @include tablet {
     margin: 1rem;
   }
 
-  @media (min-width: 1280px) {
+  @include desktop {
   }
 }
 
