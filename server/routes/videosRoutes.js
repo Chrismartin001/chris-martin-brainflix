@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const fs = require("fs");
-const uuid = require("uuid");
+const uniqid = require("uniqid");
 
 let videoList = [];
 
@@ -30,33 +30,36 @@ router.get("/:id", (req, res) => {
 });
 
 router.post("/", (req, res) => {
-  let videos = videoData;
   const { title, description, image } = req.body;
-  if (!(title && description && image)) {
-    res.status(500).send("Please provide title and description.");
-  }
 
   const newVideo = {
-    id: uuid.v4(),
     title,
-    channel: randomName,
-    image: "http",
+    channel: "randomName",
+    image,
     description,
-    views: 0,
-    likes: 0,
+    views: "954",
+    likes: "503",
     duration: "1:00",
-    video,
-    timestamp: new Date(),
-    comments: [],
+    video: "http://project-2-api.herokuapp.com/stream",
+    timestamp: Date.now(),
+    comments: [
+      {
+        name: "Joe Rogan",
+        comment: "Woah awesome dude, do a kickflip bro.",
+        likes: 561,
+        timestamp: 1628522461150,
+      },
+    ],
+    id: uniqid(),
   };
 
-  videos.push(newVideo);
+  videoList.push(newVideo);
 
-  fs.writeFile("./data/videos.json", JSON.stringify(strippedData), (err) => {
+  fs.writeFile("./data/videos.json", JSON.stringify(videoList), (err) => {
     if (err) {
       res.status(500).send("Upload was unsuccessful!");
     }
-    res.json(strippedData);
+    res.json(videoList);
   });
 });
 

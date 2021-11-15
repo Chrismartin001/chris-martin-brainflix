@@ -12,10 +12,7 @@ app.use(morgan("dev"));
 app.use(express.json());
 app.use("/videos", videosRoutes);
 
-app.use((req, res, next) => {
-  express.static(path.join(__dirname, "public"));
-  next();
-});
+app.use(express.static(path.join(__dirname, "public")));
 
 app.listen(PORT, () => {
   console.log(`Express server is up and running on ${PORT}!`);

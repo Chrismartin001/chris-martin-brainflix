@@ -1,22 +1,26 @@
 import React from "react";
-import Bike from "../../assets/images/Upload-video-preview.jpg";
 import "./uploading.scss";
+import Bike from "../../assets/images/Upload-video-preview.jpg";
 import axios from "axios";
 
 const apiURL = "http://localhost:8080";
 
-export default function Uploading() {
+export default function Uploading({ history }) {
   const uploadVideo = (event) => {
     event.preventDefault();
-    let newVideo = {
+    const newVideo = {
       title: event.target.title.value,
-      image: Bike,
-      description: event.target.description,
+      image: `${apiURL}/images/bike.jpg`,
+      description: event.target.description.value,
     };
-    axios.post(`${apiURL}/videos`, newVideo).then((res) => {
-      console.log(res);
-    });
+    axios
+      .post("http://localhost:8080/videos", newVideo)
+      .then(() => console.log("Video posted"))
+      .catch((err) => {
+        console.log(err);
+      });
     alert("Video uploaded");
+    history.push("/");
   };
 
   return (
@@ -28,20 +32,20 @@ export default function Uploading() {
       <div className="container1">
         <img className="upload__bike" src={Bike} alt="Bike rider riding a blue and black bike" />
 
-        <section className="comment1">
+        <form onSubmit={uploadVideo} id="Uploading" className="comment1">
           <label className="comment1__lable">TITLE YOUR VIDEO</label>
-          <input type="text" name="content" className="comment1__title" required placeholder="Add a title to your video" />
+          <input type="text" name="title" className="comment1__title" required placeholder="Add a title to your video" />
           <label className="comment1__lable">ADD A VIDEO DESCRIPTION</label>
-          <input type="text" name="content" className="comment1__description" required placeholder="Add a description to your video" />
+          <input type="text" name="description" className="comment1__description" required placeholder="Add a description to your video" />
 
           <hr className="upload__hidden" />
           <div className="comment1__overlay">
-            <button onClick={uploadVideo} className="comment1__button">
+            <button form="Uploading" type="submit" className="comment1__button">
               Publish
             </button>
             <h2 className="comment1__cancel">CANCEL</h2>
           </div>
-        </section>
+        </form>
       </div>
     </article>
   );

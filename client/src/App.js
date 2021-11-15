@@ -13,12 +13,11 @@ class App extends Component {
           <TopBar />
           <Switch>
             <Route path="/" exact component={Home} />
-            <Route path="/vidoes/:id" component={Home} />
+            <Route path="/videos/:id" component={Home} />
             <Route
               path="/upload"
-              component={Upload}
-              render={(reactRouterDomProps) => {
-                return <Upload {...reactRouterDomProps} />;
+              render={(props) => {
+                return <Upload {...props} />;
               }}
             />
           </Switch>
