@@ -51,6 +51,7 @@
       width: 30vw;
       margin-left: 2rem;
       margin-bottom: 0;
+      margin-right: 0.5rem;
     }
 
     @include desktop {
@@ -92,9 +93,7 @@
     color: white;
 
     @include tablet {
-      width: 25vw;
-      margin-left: 1rem;
-
+      width: 22vw;
       order: 1;
     }
 

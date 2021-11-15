@@ -13,7 +13,7 @@ export default function NextVid(props) {
           .map((vid, i) => {
             return (
               <div key={i} className="video">
-                <Link to={`/vidoes/${vid.id}`}>
+                <Link to={`/videos/${vid.id}`}>
                   <img src={vid.image} alt={vid.title} className="video__img" />
                 </Link>
                 <div className="video__box">

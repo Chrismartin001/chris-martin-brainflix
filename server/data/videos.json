@@ -259,5 +259,18 @@
       { "name": "Emily Harper", "comment": "Let’s collaborate on a video for saving money on cheap train tickets! I’ll have my associates contact yours.", "likes": 0, "timestamp": 1632496261000 }
     ],
     "id": "76ca28c0-7dea-4553-887f-8e5129a80fc3"
+  },
+  {
+    "title": "Bike Kick",
+    "channel": "randomName",
+    "image": "http://localhost:8080/images/bike.jpg",
+    "description": "Riding my Epic bike around the map",
+    "views": "954",
+    "likes": "503",
+    "duration": "1:00",
+    "video": "http://project-2-api.herokuapp.com/stream",
+    "timestamp": 1636961410183,
+    "comments": [{ "name": "Joe Rogan", "comment": "Woah awesome dude, do a kickflip bro.", "likes": 561, "timestamp": 1628522461150 }],
+    "id": "1gedbfy8kw0ck3uw"
   }
 ]
